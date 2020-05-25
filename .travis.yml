@@ -1,11 +1,10 @@
 dist: trusty
+sudo: required
 
+language: cpp
+compiler: gcc
+
+dist: xenial
 
 script: 
-	-make	
- 	   
-- git ls-files src/ | xargs clang-format -i && git diff --exit-code && make && make test
-language: cpp
-compiler: 
-  -g++
-
+    - git ls-files src/ | xargs clang-format -i && git diff --exit-code && make && make test && ./bin/geometry_test
