@@ -4,7 +4,7 @@ dist: trusty
 script: 
 	-make	
  	   
-- git ls-files src/ | xargs clang-format -i && git diff --exit-code && make && make test && ./bin/geometry_test
+- git ls-files src/ | xargs clang-format -i && git diff --exit-code && make && make test
 language: cpp
 compiler: 
   -g++
